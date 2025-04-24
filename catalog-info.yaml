@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nonai-apr24-final 
+  description: Secure Supply Chain Example for Experimental Non AI Lab Chatbot Application   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=nonai-apr24-final  
+    janus-idp.io/tekton: nonai-apr24-final 
+    backstage.io/kubernetes-id: nonai-apr24-final 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: jdubrick-ai/nonai-apr24-final
+  tags: ["ai", "llamacpp", "python", "experimental"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
